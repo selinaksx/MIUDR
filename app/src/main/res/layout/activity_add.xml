@@ -142,6 +142,21 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Activity"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
         <TextView
             android:id="@+id/textView9"
             android:layout_width="match_parent"
@@ -175,7 +190,7 @@
             android:layout_marginTop="@dimen/activity_horizontal_margin">
 
             <EditText
-                android:id="@+id/EditTextDesc"
+                android:id="@+id/editTextDesc"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:gravity="top"
