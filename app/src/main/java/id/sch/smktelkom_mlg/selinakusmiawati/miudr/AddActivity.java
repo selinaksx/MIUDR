@@ -1,14 +1,18 @@
 package id.sch.smktelkom_mlg.selinakusmiawati.miudr;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class AddActivity extends AppCompatActivity {
@@ -20,6 +24,7 @@ public class AddActivity extends AppCompatActivity {
     String area[]={"TTA Balikpapan"};
     String codejob[]={"100","200","300","305","430","460"};
     String category[]={"Absent","Development","JA Instructional","JA Non Instructional"};
+    String codecategory[]={"ABSENT","DEV","JI","JNI"};
     String activity[] = {"Absent","Formal Development","Formal Teaching","Non Formal Teaching","Other Activity","Travel"};
     private int mYear, mMonth, mDay;
     Toolbar toolbar;
@@ -82,6 +87,95 @@ public class AddActivity extends AppCompatActivity {
             etDesc.setText(desc1);
         }
 
+        etStart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Calendar mcurrentDate = Calendar.getInstance();
+                mYear = mcurrentDate.get(Calendar.YEAR);
+                mMonth = mcurrentDate.get(Calendar.MONTH);
+                mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog mDatePicker = new DatePickerDialog(AddActivity.this, new DatePickerDialog.OnDateSetListener(){
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        mYear = year;
+                        mMonth = month;
+                        mDay = dayOfMonth;
+                        updateDisplay();
+                    }
+
+                    private void updateDisplay() {
+                        etStart.setText(
+                                new StringBuilder()
+                                .append(mDay).append("/")
+                                .append(mMonth + 1).append("/")
+                                .append(mYear));
+                    }
+                }, mYear, mMonth, mDay);
+                mDatePicker.setTitle("Start Date");
+                mDatePicker.show();
+            }
+        });
+
+        etEnd.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Calendar mcurrentDate = Calendar.getInstance();
+                mYear = mcurrentDate.get(Calendar.YEAR);
+                mMonth = mcurrentDate.get(Calendar.MONTH);
+                mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog mDatePicker = new DatePickerDialog(AddActivity.this, new DatePickerDialog.OnDateSetListener(){
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        mYear = year;
+                        mMonth = month;
+                        mDay = dayOfMonth;
+                        updateDisplay();
+                    }
+
+                    private void updateDisplay() {
+                        etEnd.setText(
+                                new StringBuilder()
+                                        .append(mDay).append("/")
+                                        .append(mMonth + 1).append("/")
+                                        .append(mYear));
+                    }
+                }, mYear, mMonth, mDay);
+                mDatePicker.setTitle("End Date");
+                mDatePicker.show();
+            }
+        });
+
+        ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1, inst);
+        atvInstructor.setAdapter(adapter);
+        atvInstructor.setThreshold(1);
+
+        ArrayAdapter adapterbr = new ArrayAdapter(this,android.R.layout.simple_list_item_1, branch);
+        atvBranch.setAdapter(adapterbr);
+        atvBranch.setThreshold(1);
+
+        ArrayAdapter adapterar = new ArrayAdapter(this,android.R.layout.simple_list_item_1, area);
+        atvArea.setAdapter(adapterar);
+        atvArea.setThreshold(1);
+
+        ArrayAdapter adaptercod = new ArrayAdapter(this,android.R.layout.simple_list_item_1, codejob);
+        atvCodejob.setAdapter(adaptercod);
+        atvCodejob.setThreshold(1);
+
+        ArrayAdapter adaptercat = new ArrayAdapter(this,android.R.layout.simple_list_item_1, category);
+        atvCategory.setAdapter(adaptercat);
+        atvCategory.setThreshold(1);
+
+        ArrayAdapter adaptercocat = new ArrayAdapter(this,android.R.layout.simple_list_item_1, codecategory);
+        atvInstructor.setAdapter(adaptercocat);
+        atvInstructor.setThreshold(1);
+
+        ArrayAdapter adapteract = new ArrayAdapter(this,android.R.layout.simple_list_item_1, activity);
+        atvActivity.setAdapter(adapteract);
+        atvActivity.setThreshold(1);
+
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +193,7 @@ public class AddActivity extends AppCompatActivity {
 
                 if (!editingAct) {
                     Log.d("Act", "saving");
-                    Miudr miudr = new Miudr(newNRP, newInst, newBranch, newArea, newActivity, newCodeJob, newCategory, newCodeCategory, newActivity, newStart, newEnd, newDesc);
+                    Miudr miudr = new Miudr(newNRP, newInst, newBranch, newArea, newCodeJob, newCategory, newCodeCategory, newActivity, newStart, newEnd, newDesc);
                     miudr.save();
                 } else {
                     Log.d("Act", "updating");

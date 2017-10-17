@@ -39,13 +39,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="NRP">
 
             <EditText
                 android:id="@+id/editTextNRP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="NRP"
                 android:inputType="number"
                 android:maxLines="4"
                 android:textColor="@android:color/primary_text_light" />
@@ -55,13 +55,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Instructor">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextInst"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Instructor"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -70,13 +70,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Branch">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextBranch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Branch"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -85,13 +85,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Area">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextArea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Area"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -100,13 +100,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Code Job">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextCodeJob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Code Job"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -115,13 +115,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Category">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Category"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -130,13 +130,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Code Category">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextCodeCat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Code Category"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -145,13 +145,13 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Activity">
 
             <AutoCompleteTextView
                 android:id="@+id/editTextActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Activity"
                 android:inputType="textAutoComplete"
                 android:textColor="@android:color/primary_text_light" />
 
@@ -187,14 +187,14 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:hint="Description">
 
             <EditText
                 android:id="@+id/editTextDesc"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:gravity="top"
-                android:hint="Description"
                 android:inputType="textMultiLine"
                 android:maxLines="10"
                 android:textColor="@android:color/primary_text_light" />

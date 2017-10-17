@@ -10,7 +10,7 @@ public class Miudr extends SugarRecord{
 
     String nrp, instructor, branch, area, codejob, category, codecategory, activity, description, start, end;
 
-    public Miudr(String newNRP, String newInst, String newBranch, String newArea, String newActivity, String newCodeJob, String newCategory, String newCodeCategory, String activity, String newStart, String newEnd, String newDesc) {
+    public Miudr() {
 
     }
 

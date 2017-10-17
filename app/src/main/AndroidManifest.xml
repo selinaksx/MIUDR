@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +31,7 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="id.sch.smktelkom_mlg.selinakusmiawati.miudr" />
 
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>
