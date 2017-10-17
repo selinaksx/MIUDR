@@ -1,0 +1,203 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.sch.smktelkom_mlg.selinakusmiawati.miudr.AddActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/addnote_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/addnote_toolbar"
+        app:layout_constraintTop_toTopOf="@+id/addnote_toolbar"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <EditText
+                android:id="@+id/editTextNRP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NRP"
+                android:inputType="number"
+                android:maxLines="4"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextInst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Instructor"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Branch"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Area"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextCodeJob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Code Job"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <AutoCompleteTextView
+                android:id="@+id/editTextCodeCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Code Category"
+                android:inputType="textAutoComplete"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Date"
+            android:textSize="@dimen/font_size"/>
+
+        <EditText
+            android:id="@+id/editTextStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End Date"
+            android:textSize="@dimen/font_size"/>
+
+        <EditText
+            android:id="@+id/editTextEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+            <EditText
+                android:id="@+id/EditTextDesc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:textColor="@android:color/primary_text_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_done_24dp"
+            android:tint="@android:color/white" />
+
+
+    </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+    </ScrollView>
