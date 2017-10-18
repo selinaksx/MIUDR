@@ -47,6 +47,7 @@ public class AddActivity extends AppCompatActivity {
         etStart = (EditText) findViewById(R.id.editTextStart);
         etEnd = (EditText) findViewById(R.id.editTextEnd);
         etDesc = (EditText) findViewById(R.id.editTextDesc);
+
         toolbar = (Toolbar) findViewById(R.id.addnote_toolbar);
         fab = (FloatingActionButton) findViewById(R.id.add_fab);
 
@@ -168,8 +169,8 @@ public class AddActivity extends AppCompatActivity {
         atvCategory.setThreshold(1);
 
         ArrayAdapter adaptercocat = new ArrayAdapter(this,android.R.layout.simple_list_item_1, codecategory);
-        atvInstructor.setAdapter(adaptercocat);
-        atvInstructor.setThreshold(1);
+        atvCodecategory.setAdapter(adaptercocat);
+        atvCodecategory.setThreshold(1);
 
         ArrayAdapter adapteract = new ArrayAdapter(this,android.R.layout.simple_list_item_1, activity);
         atvActivity.setAdapter(adapteract);
@@ -193,8 +194,7 @@ public class AddActivity extends AppCompatActivity {
 
                 if (!editingAct) {
                     Log.d("Act", "saving");
-                    Miudr miudr = new Miudr(newNRP, newInst, newBranch, newArea, newCodeJob, newCategory, newCodeCategory, newActivity, newStart, newEnd, newDesc);
-                    miudr.save();
+                    Miudr miudr = new Miudr(newNRP, newInst, newBranch, newArea, newCodeJob, newCategory, newCodeCategory, newActivity, newStart, newEnd, newDesc);                   miudr.save();
                 } else {
                     Log.d("Act", "updating");
 

@@ -2,6 +2,7 @@ package id.sch.smktelkom_mlg.selinakusmiawati.miudr;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,8 @@ public class MiudrAdapter extends RecyclerView.Adapter<MiudrAdapter.MiudrVH> {
     }
 
     public MiudrVH onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        Log.d("show","up");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.miudr_item, parent, false);
         MiudrVH viewHolder = new MiudrVH(view);
         return viewHolder;
@@ -33,6 +36,8 @@ public class MiudrAdapter extends RecyclerView.Adapter<MiudrAdapter.MiudrVH> {
 
     @Override
     public void onBindViewHolder(MiudrAdapter.MiudrVH holder, int position) {
+
+        Log.d("displaying","items");
         holder.nrp.setText(miudrs.get(position).getNRP());
         holder.desc.setText(miudrs.get(position).getDescription());
     }

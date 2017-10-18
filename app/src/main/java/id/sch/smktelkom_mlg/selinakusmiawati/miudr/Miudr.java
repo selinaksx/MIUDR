@@ -8,13 +8,13 @@ import com.orm.SugarRecord;
 
 public class Miudr extends SugarRecord{
 
-    String nrp, instructor, branch, area, codejob, category, codecategory, activity, description, start, end;
+    String nrp, instructor, branch, area, codejob, category, codecategory, activity, start, end, description;
 
     public Miudr() {
 
     }
 
-    public Miudr (String nrp, String instructor, String branch, String area, String codejob, String category, String codecategory, String activity, String desc, String start, String end) {
+    public Miudr (String nrp, String instructor, String branch, String area, String codejob, String category, String codecategory, String activity,  String start, String end, String desc) {
         this.nrp = nrp;
         this.instructor = instructor;
         this.branch = branch;
